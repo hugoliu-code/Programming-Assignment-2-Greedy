@@ -2,6 +2,7 @@
 
 from fifo import fifo
 from lru import lru
+from optff import optff
 
 def read_input(input_file):
     with open(input_file, "r") as f:
@@ -41,7 +42,7 @@ if __name__ == "__main__":
     
     fifo_misses = fifo(k, m, requests)
     lru_misses = lru(k, m, requests)
-    optff_misses = 1 # TODO: Ethan
+    optff_misses = optff(k, m, requests)
 
 
     print_output(fifo_misses, lru_misses, optff_misses, output_file)
