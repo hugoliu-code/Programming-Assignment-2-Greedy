@@ -7,7 +7,7 @@ def optff(capacity, requests_count, requests):
     misses = 0
 
     request_idxs = defaultdict(list)
-    for i, r in enumerate(requests):
+    for i, r in enumerate(reversed(requests)):
         request_idxs[r].append(i)
 
     # Create max heap to keep track of farthest in future
@@ -28,5 +28,3 @@ def optff(capacity, requests_count, requests):
         cache.add(r)
     
     return misses
-        
-            
