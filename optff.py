@@ -5,6 +5,10 @@ import math
 
 
 def optff(capacity, requests_count, requests):
+    # nothing can be stored in cache, all misses
+    if capacity == 0:
+        return requests_count
+    
     misses = 0
 
     request_idxs = defaultdict(list)
@@ -13,7 +17,6 @@ def optff(capacity, requests_count, requests):
         request_idxs[r].append(i)
 
 
-    l = []
     cache = set()
 
     for r in requests:
@@ -22,13 +25,11 @@ def optff(capacity, requests_count, requests):
         if r in cache:
             continue
         
-        if len(l) >= capacity:
-            max_ind = max(l, key = lambda x : request_idxs[x][-1] if len(request_idxs[x]) > 0 else math.inf)
+        if len(cache) >= capacity:
+            max_ind = max(cache, key = lambda x : request_idxs[x][-1] if len(request_idxs[x]) > 0 else math.inf)
             cache.remove(max_ind)
-            l.remove(max_ind)
         
         cache.add(r)
-        l.append(r)
         misses += 1
 
 
