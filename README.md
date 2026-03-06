@@ -3,7 +3,7 @@
 ### Students
 
 Hugo Liu - 46439406
-Ethan Krol - TODO
+Ethan Krol - 33541943
 
 ### Instructions to Run
 
