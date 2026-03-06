@@ -1,8 +1,8 @@
 import math, random, os
 from comparison import read_input, print_output
-from fifo import fifo
-from lru import lru
-from optff import optff
+from algorithms.fifo import fifo
+from algorithms.lru import lru
+from algorithms.optff import optff
 import pandas as pd
 import matplotlib.pyplot as plt
 

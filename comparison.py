@@ -1,8 +1,8 @@
 # compare all 3 policies given 1 input
 
-from fifo import fifo
-from lru import lru
-from optff import optff
+from algorithms.fifo import fifo
+from algorithms.lru import lru
+from algorithms.optff import optff
 
 def read_input(input_file):
     with open(input_file, "r") as f:
@@ -24,9 +24,11 @@ def print_output(fifo_misses, lru_misses, optff_misses, outputfile = ""):
             f.write(f"OPTFF : {optff_misses}\n")  
 
 if __name__ == "__main__":
-    # read input
+
+    # MANUAL SET THESE, IF BLANK, WILL PROMPT USER
     input_file = "inputs/example1.in"
     output_file = "outputs/example1.out"
+
     if len(input_file) == 0:
         input_file = input("Enter the input file name: ")
     if len(output_file) == 0:
