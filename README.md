@@ -30,10 +30,16 @@ Where:
 ( r_1, .., r_m ) = sequence of integer IDs
 ```
 
-The output file can be any writable file type (.txt, .out, etc), and will be overwritten with:
+The output file can be any plaintext writable file type (.txt, .out, etc), and will be overwritten with:
 
 ```
 FIFO  : <number_of_misses>
 LRU   : <number_of_misses>
 OPTFF : <number_of_misses>
 ```
+
+### Extra Files
+
+**writtencomponent.pdf** contains the written portion of the assignment.
+
+**questionone.py** contains some helper code used to solve question 1, and can be disregarded.

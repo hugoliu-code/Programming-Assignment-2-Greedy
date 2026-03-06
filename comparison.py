@@ -26,8 +26,8 @@ def print_output(fifo_misses, lru_misses, optff_misses, outputfile = ""):
 if __name__ == "__main__":
 
     # MANUAL SET THESE, IF BLANK, WILL PROMPT USER
-    input_file = "inputs/example1.in"
-    output_file = "outputs/example1.out"
+    input_file = "inputs/question2.in"
+    output_file = "outputs/question2.out"
 
     if len(input_file) == 0:
         input_file = input("Enter the input file name: ")
